@@ -1,6 +1,6 @@
 {
   "name": "react-steam-level",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A component that makes it easy to include styled steam profile levels in your react project.",
   "license": "MIT",
   "source": "src/index.tsx",

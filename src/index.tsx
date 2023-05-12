@@ -10,6 +10,14 @@ interface SteamLevelProps extends React.HTMLAttributes<HTMLDivElement> {
 const SteamLevel: React.FC<SteamLevelProps> = (props) => {
   const { level, size = 32, ...rest } = props;
 
+  if (level < 0) {
+    throw new Error("The level must be greater than 0");
+  }
+
+  if (level > 5299) {
+    throw new Error("The level must be less than 5299");
+  }
+
   const getLevelClass = React.useCallback(
     (level = 0) => {
       const lvl = Math.floor(level / 100) * 100 || Math.floor(level / 10) * 10;
